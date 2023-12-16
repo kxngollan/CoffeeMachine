@@ -64,9 +64,6 @@ def makeDrink(drink):
     resources[item] -= drink["ingredients"][item]
   print("Here is your drink. Enjoy!")
 
-
-
-
 ordering = True
 
 while ordering:
@@ -90,7 +87,7 @@ while ordering:
             money += MENU[drink]["cost"]
             if enoughResources:
                 makeDrink(MENU[drink])
-    if drink == "off":
+    elif drink == "off":
        ordering = False
     else:
       print("This isn't a valid selection")
